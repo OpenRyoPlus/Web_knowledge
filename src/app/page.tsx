@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Home.module.css';
@@ -8,6 +9,7 @@ const categories = [
   { name: 'コンピュータ', href: '/computer', color: '#2ecc71', icon: '/icons/computer.svg' },
   { name: '芸術', href: '/art', color: '#e74c3c', icon: '/icons/art.svg' },
   { name: '科学', href: '/science', color: '#f1c40f', icon: '/icons/science.svg' },
+  { name: 'AI', href: '/ai', color: '#6a0dad', icon: '/icons/ai.svg' }, // AIカテゴリを追加
 ];
 
 export default function HomePage() {

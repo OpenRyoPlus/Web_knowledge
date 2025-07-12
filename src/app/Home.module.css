@@ -1,3 +1,4 @@
+
 .container {
   display: flex;
   flex-direction: column;
@@ -33,7 +34,7 @@
 
 .categoryGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(3, 1fr); /* 3列表示 */
   gap: 15px;
   justify-content: center;
 }
