@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #f0f2f5; /* Light gray background */
+}
+
+.header {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.title {
+  font-size: 48px; /* 大きく */
+  font-weight: 300;
+  color: #4A4A4A;
+}
+
+.subtitle {
+  font-size: 56px; /* 大きく */
+  font-weight: bold;
+  color: #333;
+}
+
+.categorySection {
+  margin-top: 40px; /* タイトルとの間隔を空ける */
+  width: 100%;
+  max-width: 800px; /* Max width for categories */
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+  gap: 15px;
+  justify-content: center;
+}
+
+.categoryButton {
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none; /* Remove underline from Link */
+  color: #fff; /* White text for category buttons */
+  font-weight: bold;
+  transition: transform 0.2s ease-in-out; /* Add hover effect */
+}
+
+.categoryButton:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.categoryIcon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.categoryText {
+  font-size: 16px;
+  margin: 0;
+}

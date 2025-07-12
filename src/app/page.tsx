@@ -1,24 +1,33 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import styles from './Home.module.css';
 
 const categories = [
-  { name: '歴史', href: '/history' },
-  { name: '哲学', href: '/philosophy' },
-  { name: 'コンピュータ', href: '/computer' },
-  { name: '芸術', href: '/art' },
-  { name: '科学', href: '/science' },
+  { name: '歴史', href: '/history', color: '#3498db', icon: '/icons/history.svg' },
+  { name: '哲学', href: '/philosophy', color: '#9b59b6', icon: '/icons/philosophy.svg' },
+  { name: 'コンピュータ', href: '/computer', color: '#2ecc71', icon: '/icons/computer.svg' },
+  { name: '芸術', href: '/art', color: '#e74c3c', icon: '/icons/art.svg' },
+  { name: '科学', href: '/science', color: '#f1c40f', icon: '/icons/science.svg' },
 ];
 
 export default function HomePage() {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-4xl font-bold text-center my-8">世界の教養</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {categories.map((category) => (
-          <Link key={category.name} href={category.href} className="block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
-            <h2 className="text-2xl font-bold">{category.name}</h2>
-          </Link>
-        ))}
-      </div>
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <h1 className={styles.title}>スキマ時間に学べる</h1>
+        <p className={styles.subtitle}>世界の教養</p>
+      </header>
+
+      <section className={styles.categorySection}>
+        <div className={styles.categoryGrid}>
+          {categories.map((category) => (
+            <Link key={category.name} href={category.href} className={styles.categoryButton} style={{ backgroundColor: category.color }}>
+              <Image src={category.icon} alt={category.name} width={40} height={40} className={styles.categoryIcon} />
+              <p className={styles.categoryText}>{category.name}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
