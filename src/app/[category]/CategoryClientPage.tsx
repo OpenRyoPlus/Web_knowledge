@@ -32,14 +32,17 @@ export default function CategoryClientPage({ category, cards }: CategoryClientPa
           ))}
         </ul>
       </aside>
-      <main className="w-3/4 p-8 overflow-y-auto">
-        {selectedCard && (
-          <div>
-            <h1 className="text-4xl font-bold mb-4">{selectedCard.title}</h1>
-            <p className="text-lg whitespace-pre-wrap">{selectedCard.content}</p>
-          </div>
+      <main className="w-3/4 p-8 overflow-y-auto flex items-center justify-center">
+       {selectedCard && (
+         <div className="max-w-2xl">
+          <h1 className="text-4xl font-bold mb-6 text-center">{selectedCard.title}</h1>
+          <p className="text-lg whitespace-pre-wrap leading-relaxed text-left">
+           {selectedCard.content}
+          </p>
+        </div>
         )}
       </main>
+
     </div>
   );
 }
