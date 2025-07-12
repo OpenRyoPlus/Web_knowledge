@@ -36,7 +36,7 @@ export default function CategoryClientPage({ category, cards }: CategoryClientPa
        {selectedCard && (
          <div className="max-w-2xl">
           <h1 className="text-4xl font-bold mb-6 text-center">{selectedCard.title}</h1>
-          <p className="text-lg whitespace-pre-wrap leading-relaxed text-left">
+          <p className="text-2xl whitespace-pre-wrap leading-relaxed text-left">
            {selectedCard.content}
           </p>
         </div>
