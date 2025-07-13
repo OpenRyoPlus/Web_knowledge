@@ -1,13 +1,7 @@
 import CategoryClientPage from './CategoryClientPage';
 import knowledge from '@/data/knowledge_cards.json';
 
-type Props = {
-  params: {
-    category: string;
-  };
-};
-
-export default function CategoryPage({ params }: Props) {
+export default function CategoryPage({ params }: { params: { category: string } }) {
   const { category } = params;
   const cards = knowledge[category as keyof typeof knowledge] || [];
 
