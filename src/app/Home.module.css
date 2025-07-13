@@ -39,6 +39,12 @@
   justify-content: center;
 }
 
+@media (max-width: 768px) {
+  .categoryGrid {
+    grid-template-columns: 1fr; /* 1列表示 */
+  }
+}
+
 .categoryButton {
   padding: 20px;
   border-radius: 15px;
