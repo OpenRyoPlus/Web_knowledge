@@ -1,4 +1,4 @@
-
+import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Home.module.css';
@@ -14,6 +14,14 @@ const categories = [
 
 export default function HomePage() {
   return (
+    <>
+      <Head>
+        <title>スキマ時間に学べる世界の教養</title>
+        <meta
+          name="description"
+          content="スキマ時間で歴史・科学・哲学など世界の教養をサクッと学べる、カード形式の無料Webアプリ。"
+        />
+      </Head>
     <div className={styles.container}>
       <header className={styles.header}>
         <h1 className={styles.title}>スキマ時間に学べる</h1>
@@ -31,5 +39,6 @@ export default function HomePage() {
         </div>
       </section>
     </div>
+    </>
   );
 }
